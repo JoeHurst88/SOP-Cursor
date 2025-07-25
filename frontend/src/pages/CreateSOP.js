@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import { useAuth } from '../hooks/useAuth';
 
 const CreateSOP = () => {
   const navigate = useNavigate();
   // eslint-disable-next-line no-unused-vars
-  useAuth();
+  const {} = useAuth();
   const [showPreview, setShowPreview] = useState(false);
   
   const [formData, setFormData] = useState({
@@ -121,9 +121,6 @@ const CreateSOP = () => {
       // You might want to show this error to the user in the UI
     }
   };
-
-  // eslint-disable-next-line no-unused-vars
-  const { user } = useAuth();
 
   return (
     <div className="min-h-screen bg-gray-100 py-6 px-4 sm:px-6 lg:px-8">
