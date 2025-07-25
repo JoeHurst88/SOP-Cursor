@@ -6,7 +6,8 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const CreateSOP = () => {
   const navigate = useNavigate();
-  useAuth(); // Initialize auth context
+  // eslint-disable-next-line no-unused-vars
+  useAuth();
   const [showPreview, setShowPreview] = useState(false);
   
   const [formData, setFormData] = useState({
@@ -120,6 +121,9 @@ const CreateSOP = () => {
       // You might want to show this error to the user in the UI
     }
   };
+
+  // eslint-disable-next-line no-unused-vars
+  const { user } = useAuth();
 
   return (
     <div className="min-h-screen bg-gray-100 py-6 px-4 sm:px-6 lg:px-8">
